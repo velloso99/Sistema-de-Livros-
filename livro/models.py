@@ -1,4 +1,13 @@
 from django.db import models
 
-class livros(models.Model):
-    pass
+class Livros(models.Model):
+    nome = models.CharField(max_length=100)
+    autor = models.CharField(max_length=30)
+    co_autor = models.CharField(max_length=30)
+    data_cadastro = models.DateField()
+    emprestado = models.BooleanField(default=False)
+    nome_emprestimo = models.CharField(max_length=30)
+    data_emprestimo = models.DateTimeField()
+    data_devolucao = models.DateTimeField()
+    tempo_emprestimo = models.DateTimeField()
+
