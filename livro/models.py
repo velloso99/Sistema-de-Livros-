@@ -11,3 +11,6 @@ class Livros(models.Model):
     data_devolucao = models.DateTimeField()
     tempo_emprestimo = models.DateTimeField()
 
+    class Meta:
+        verbose_name = "Livro"
+
