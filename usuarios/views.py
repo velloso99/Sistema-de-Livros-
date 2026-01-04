@@ -32,4 +32,4 @@ def valida_cadastro(request):
     except:
         return redirect('/auth/cadastro/?statud=4')
 
-    
+    return HttpResponse(f"{nome}{senha}{email}")
