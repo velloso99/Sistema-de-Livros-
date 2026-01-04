@@ -11,7 +11,7 @@
         <div class="col-md-3">
             <h1>Cadstra-se</h1>
             <hr>
-            <form method="post" action="{% url 'valida_cadastro'%}">{% csrf_token%}
+            <form method="POST" action="{% url 'valida_cadastro'%}">{% csrf_token%}
                 <label>Nome</label>
                 <input name="nome" class="form-control" type="text" placeholder="Nome...">
                 <br>
