@@ -8,9 +8,9 @@ class Livros(models.Model):
     data_cadastro = models.DateField( default=date.today)
     emprestado = models.BooleanField(default=False)
     nome_emprestimo = models.CharField(max_length=30, blank=True)
-    data_emprestimo = models.DateTimeField(blank=True)
-    data_devolucao = models.DateTimeField(blank=True)
-    tempo_emprestimo = models.DateTimeField(blank=True)
+    data_emprestimo = models.DateTimeField(blank=True, null=True)
+    data_devolucao = models.DateTimeField(blank=True, null=True)
+    tempo_emprestimo = models.DateTimeField(blank=True, null=True)
 
     class Meta:
         verbose_name = "Livro"
